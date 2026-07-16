@@ -1,0 +1,18 @@
+{
+  "gui.echo_compass_hud.direction.north": "Північ",
+  "gui.echo_compass_hud.direction.south": "Південь",
+  "gui.echo_compass_hud.direction.east": "Схід",
+  "gui.echo_compass_hud.direction.west": "Захід",
+  "gui.echo_compass_hud.direction.northeast": "Північний Схід",
+  "gui.echo_compass_hud.direction.northwest": "Північний Захід",
+  "gui.echo_compass_hud.direction.southeast": "Південний Схід",
+  "gui.echo_compass_hud.direction.southwest": "Південний Захід",
+  "gui.echo_compass_hud.direction.short.north": "Пн",
+  "gui.echo_compass_hud.direction.short.south": "Пд",
+  "gui.echo_compass_hud.direction.short.east": "С",
+  "gui.echo_compass_hud.direction.short.west": "З",
+  "gui.echo_compass_hud.direction.short.ne": "Пн С",
+  "gui.echo_compass_hud.direction.short.nw": "Пн З",
+  "gui.echo_compass_hud.direction.short.se": "Пд С",
+  "gui.echo_compass_hud.direction.short.sw": "Пд З"
+}

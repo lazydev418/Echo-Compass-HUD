@@ -1,0 +1,18 @@
+{
+  "gui.echo_compass_hud.direction.north": "Norden",
+  "gui.echo_compass_hud.direction.south": "Süden",
+  "gui.echo_compass_hud.direction.east": "Osten",
+  "gui.echo_compass_hud.direction.west": "Westen",
+  "gui.echo_compass_hud.direction.northeast": "Nordosten",
+  "gui.echo_compass_hud.direction.northwest": "Nordwesten",
+  "gui.echo_compass_hud.direction.southeast": "Südosten",
+  "gui.echo_compass_hud.direction.southwest": "Südwesten",
+  "gui.echo_compass_hud.direction.short.north": "N",
+  "gui.echo_compass_hud.direction.short.south": "S",
+  "gui.echo_compass_hud.direction.short.east": "O",
+  "gui.echo_compass_hud.direction.short.west": "W",
+  "gui.echo_compass_hud.direction.short.ne": "NO",
+  "gui.echo_compass_hud.direction.short.nw": "NW",
+  "gui.echo_compass_hud.direction.short.se": "SO",
+  "gui.echo_compass_hud.direction.short.sw": "SW"
+}

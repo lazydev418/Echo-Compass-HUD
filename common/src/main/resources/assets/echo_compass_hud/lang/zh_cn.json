@@ -1,0 +1,18 @@
+{
+  "gui.echo_compass_hud.direction.north": "北",
+  "gui.echo_compass_hud.direction.south": "南",
+  "gui.echo_compass_hud.direction.east": "东",
+  "gui.echo_compass_hud.direction.west": "西",
+  "gui.echo_compass_hud.direction.northeast": "东北",
+  "gui.echo_compass_hud.direction.northwest": "西北",
+  "gui.echo_compass_hud.direction.southeast": "东南",
+  "gui.echo_compass_hud.direction.southwest": "西南",
+  "gui.echo_compass_hud.direction.short.north": "北",
+  "gui.echo_compass_hud.direction.short.south": "南",
+  "gui.echo_compass_hud.direction.short.east": "东",
+  "gui.echo_compass_hud.direction.short.west": "西",
+  "gui.echo_compass_hud.direction.short.ne": "东北",
+  "gui.echo_compass_hud.direction.short.nw": "西北",
+  "gui.echo_compass_hud.direction.short.se": "东南",
+  "gui.echo_compass_hud.direction.short.sw": "西南"
+}

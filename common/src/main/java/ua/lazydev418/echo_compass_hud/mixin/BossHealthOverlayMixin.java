@@ -23,7 +23,7 @@ public class BossHealthOverlayMixin {
         Minecraft mc = Minecraft.getInstance();
         Player player = mc.player;
 
-        if (player == null || mc.options.renderDebug) return;
+        if (player == null || mc.gui.getDebugOverlay().showDebugScreen()) return;
 
         if (mc.gui.getTabList() instanceof IPlayerTabOverlay tab) {
             if (tab.isVisible() || mc.options.keyPlayerList.isDown()) return;
@@ -73,7 +73,7 @@ public class BossHealthOverlayMixin {
         Minecraft mc = Minecraft.getInstance();
         Player player = mc.player;
 
-        if (player == null || mc.options.renderDebug) return;
+        if (player == null || mc.gui.getDebugOverlay().showDebugScreen()) return;
         if (mc.gui.getTabList() instanceof IPlayerTabOverlay tab) {
             if (tab.isVisible() || mc.options.keyPlayerList.isDown()) return;
         }

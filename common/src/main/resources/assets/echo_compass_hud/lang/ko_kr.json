@@ -1,0 +1,18 @@
+{
+  "gui.echo_compass_hud.direction.north": "북쪽",
+  "gui.echo_compass_hud.direction.south": "남쪽",
+  "gui.echo_compass_hud.direction.east": "동쪽",
+  "gui.echo_compass_hud.direction.west": "서쪽",
+  "gui.echo_compass_hud.direction.northeast": "북동쪽",
+  "gui.echo_compass_hud.direction.northwest": "북서쪽",
+  "gui.echo_compass_hud.direction.southeast": "남동쪽",
+  "gui.echo_compass_hud.direction.southwest": "남서쪽",
+  "gui.echo_compass_hud.direction.short.north": "북",
+  "gui.echo_compass_hud.direction.short.south": "남",
+  "gui.echo_compass_hud.direction.short.east": "동",
+  "gui.echo_compass_hud.direction.short.west": "서",
+  "gui.echo_compass_hud.direction.short.ne": "북동",
+  "gui.echo_compass_hud.direction.short.nw": "북서",
+  "gui.echo_compass_hud.direction.short.se": "남동",
+  "gui.echo_compass_hud.direction.short.sw": "남서"
+}

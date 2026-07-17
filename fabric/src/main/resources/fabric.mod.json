@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-          "ua.lazydev418.echo_compass_hud.EchoCompassHUD"
+            "ua.lazydev418.echo_compass_hud.EchoCompassHUD"
         ]
     },
     "mixins": [

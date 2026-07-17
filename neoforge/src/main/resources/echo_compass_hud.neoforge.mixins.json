@@ -1,15 +1,13 @@
 {
-    "required": true,
-    "minVersion": "0.8",
-    "package": "ua.lazydev418.echo_compass_hud.mixin",
-    "compatibilityLevel": "JAVA_17",
-    "mixins": [
-    ],
-    "client": [
-    ],
-    "server": [
-    ],
-    "injectors": {
-        "defaultRequire": 1
-    }
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ua.lazydev418.echo_compass_hud.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
+  "client": [
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }

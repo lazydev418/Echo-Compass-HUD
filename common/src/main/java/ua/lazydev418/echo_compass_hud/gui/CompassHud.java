@@ -9,6 +9,7 @@ import ua.lazydev418.echo_compass_hud.util.CompassMath;
 public class CompassHud {
     public static void render(GuiGraphics gg) {
         Minecraft mc = Minecraft.getInstance();
+        assert mc.player != null;
         float yaw = CompassMath.normalizeYaw(mc.player.getYRot() + 180f);
 
         int scaledWidth = mc.getWindow().getGuiScaledWidth();

@@ -1,6 +1,6 @@
 package ua.lazydev418.echo_compass_hud;
 
-import net.neoforged.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod;
 import ua.lazydev418.echo_compass_hud.config.ClientConfig;
 import ua.lazydev418.echo_compass_hud.util.Constants;
 

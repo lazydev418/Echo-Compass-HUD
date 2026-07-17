@@ -3,7 +3,6 @@ package ua.lazydev418.echo_compass_hud.util;
 public class CompassMath {
     public static final float MARKER_SPACING = 50.0f;
     public static final float SCALE_FACTOR = 1.5f;
-    public static final int MAX_RENDER_WIDTH = 125;
 
     public static float normalizeYaw(float yaw) {
         return (yaw % 360 + 360) % 360;

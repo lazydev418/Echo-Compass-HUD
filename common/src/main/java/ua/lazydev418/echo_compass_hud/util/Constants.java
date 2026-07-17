@@ -10,5 +10,5 @@ public class Constants {
     public static final String MOD_NAME = "Echo Compass HUD";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
 
-    public static final ResourceLocation COMPASS_BACKGROUND = new ResourceLocation(MOD_ID, "textures/gui/compass_background.png");
+    public static final ResourceLocation COMPASS_BACKGROUND = ResourceLocation.fromNamespaceAndPath(MOD_ID, "textures/gui/compass_background.png");
 }

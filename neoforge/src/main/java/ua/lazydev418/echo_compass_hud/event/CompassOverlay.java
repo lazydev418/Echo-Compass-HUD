@@ -1,24 +1,24 @@
 package ua.lazydev418.echo_compass_hud.event;
 
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.event.RenderGuiOverlayEvent;
+import net.neoforged.neoforge.client.gui.overlay.VanillaGuiOverlay;
 import ua.lazydev418.echo_compass_hud.gui.CompassHud;
-import ua.lazydev418.echo_compass_hud.util.IPlayerTabOverlay; //
-import ua.lazydev418.echo_compass_hud.util.Constants; //
+import ua.lazydev418.echo_compass_hud.util.IPlayerTabOverlay;
+import ua.lazydev418.echo_compass_hud.util.Constants;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
-import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
-import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 
-@EventBusSubscriber(
-        modid = Constants.MOD_ID, //
+@Mod.EventBusSubscriber(
+        modid = Constants.MOD_ID,
         value = Dist.CLIENT
 )
 public class CompassOverlay {
 
     @SubscribeEvent
-    public static void onRenderGameOverlay(RenderGuiLayerEvent.Pre event) {
-        if (!event.getName().equals(VanillaGuiLayers.HOTBAR)) return;
+    public static void onRenderGameOverlay(RenderGuiOverlayEvent.Pre event) {
+        if (!event.getOverlay().id().equals(VanillaGuiOverlay.HOTBAR.id())) return;
 
         Minecraft mc = Minecraft.getInstance();
         if (mc.player == null || mc.gui.getDebugOverlay().showDebugScreen()) return;

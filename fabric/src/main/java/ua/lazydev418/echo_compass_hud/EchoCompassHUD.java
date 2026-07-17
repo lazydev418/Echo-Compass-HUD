@@ -8,7 +8,7 @@ import ua.lazydev418.echo_compass_hud.gui.CompassHud;
 import ua.lazydev418.echo_compass_hud.util.IPlayerTabOverlay;
 
 public class EchoCompassHUD implements ModInitializer {
-    
+
     @Override
     public void onInitialize() {
 

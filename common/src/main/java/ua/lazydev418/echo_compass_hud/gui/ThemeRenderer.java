@@ -41,7 +41,7 @@ public class ThemeRenderer {
             } else {
                 gg.fill((int) xPos, 4, (int) xPos + 1, 8, Colors.WHITE.argb);
 
-                String numText = String.valueOf((int)angleLoop);
+                String numText = String.valueOf((int) angleLoop);
 
                 gg.pose().pushPose();
                 float scale = 0.9f;

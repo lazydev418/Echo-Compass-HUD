@@ -3,6 +3,7 @@ package ua.lazydev418.echo_compass_hud.gui;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.entity.player.Player;
 import ua.lazydev418.echo_compass_hud.util.Colors;
 import ua.lazydev418.echo_compass_hud.util.Constants;
@@ -16,7 +17,7 @@ public class ThemeRenderer {
         gg.fill(centerX - 127, 0, centerX + 127, 24, 0x40000000);
         gg.pose().pushPose();
         gg.pose().translate(0, 0, 20);
-        gg.blit(Constants.COMPASS_BACKGROUND, centerX - 128, 0, 0, 0, 256, 45, 256, 45);
+        gg.blit(RenderType::guiTextured, Constants.COMPASS_BACKGROUND, centerX - 128, 0, 0, 0, 256, 45, 256, 45);
         gg.pose().popPose();
     }
 

@@ -15,7 +15,7 @@ import ua.lazydev418.echo_compass_hud.util.IPlayerTabOverlay;
 public class GuiMixin {
 
     @Inject(method = "render", at = @At("TAIL"))
-    private void renderCompassHud(GuiGraphics guiGraphics, DeltaTracker deltaTracker, CallbackInfo ci) {
+    private void renderCompassHud(GuiGraphics gg, DeltaTracker dt, CallbackInfo ci) {
         Minecraft mc = Minecraft.getInstance();
 
         if (mc.player == null || mc.gui.getDebugOverlay().showDebugScreen()) return;
@@ -23,6 +23,6 @@ public class GuiMixin {
         IPlayerTabOverlay tab = (IPlayerTabOverlay) mc.gui.getTabList();
         if (tab != null && (tab.isVisible() || mc.options.keyPlayerList.isDown())) return;
 
-        CompassHud.render(guiGraphics);
+        CompassHud.render(gg);
     }
 }

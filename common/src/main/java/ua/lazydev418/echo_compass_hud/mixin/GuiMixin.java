@@ -1,7 +1,7 @@
 package ua.lazydev418.echo_compass_hud.mixin;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.DeltaTracker; // Новий клас у 1.21 для роботи з тіками
+import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;
 import org.spongepowered.asm.mixin.Mixin;

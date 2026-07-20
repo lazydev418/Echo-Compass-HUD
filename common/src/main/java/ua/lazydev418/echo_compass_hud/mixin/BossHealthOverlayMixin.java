@@ -1,6 +1,5 @@
 package ua.lazydev418.echo_compass_hud.mixin;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.BossHealthOverlay;
@@ -60,9 +59,8 @@ public class BossHealthOverlayMixin {
             yOffset = (45.0F * scale) + 3.0F;
         }
 
-        PoseStack ps = gg.pose();
-        ps.pushPose();
-        ps.translate(0.0F, yOffset, 0.0F);
+        gg.pose().pushMatrix();
+        gg.pose().translate(0.0F, yOffset);
     }
 
     @Inject(
@@ -78,7 +76,6 @@ public class BossHealthOverlayMixin {
             if (tab.isVisible() || mc.options.keyPlayerList.isDown()) return;
         }
 
-        PoseStack ps = gg.pose();
-        ps.popPose();
+        gg.pose().popMatrix();
     }
 }

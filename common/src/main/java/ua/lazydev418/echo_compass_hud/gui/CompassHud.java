@@ -1,6 +1,5 @@
 package ua.lazydev418.echo_compass_hud.gui;
 
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import ua.lazydev418.echo_compass_hud.config.ClientConfig;
@@ -32,14 +31,14 @@ public class CompassHud {
             actualCenterX = scaledWidth / 2f + (maxX - scaledWidth / 2f) * (pos - 1.0f);
         }
 
-        gg.pose().pushPose();
-        gg.pose().translate(actualCenterX, 0, 0);
-        gg.pose().scale(scale, scale, 1.0f);
+        gg.pose().pushMatrix();
+        gg.pose().translate(actualCenterX, 0);
+        gg.pose().scale(scale, scale);
 
         ThemeRenderer.renderBackground(gg, 0);
         ThemeRenderer.renderCompassStrip(gg, mc.font, 0, yaw);
         ThemeRenderer.renderInfoText(gg, mc.font, mc.player, 0, yaw);
 
-        gg.pose().popPose();
+        gg.pose().popMatrix();
     }
 }

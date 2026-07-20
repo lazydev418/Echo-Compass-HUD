@@ -3,7 +3,7 @@ package ua.lazydev418.echo_compass_hud.gui;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.world.entity.player.Player;
 import ua.lazydev418.echo_compass_hud.util.Colors;
 import ua.lazydev418.echo_compass_hud.util.Constants;
@@ -15,10 +15,10 @@ public class ThemeRenderer {
     public static void renderBackground(GuiGraphics gg, int centerX) {
         gg.fill(centerX - 127, 27, centerX + 127, 43, 0x40000000);
         gg.fill(centerX - 127, 0, centerX + 127, 24, 0x40000000);
-        gg.pose().pushPose();
-        gg.pose().translate(0, 0, 20);
-        gg.blit(RenderType::guiTextured, Constants.COMPASS_BACKGROUND, centerX - 128, 0, 0, 0, 256, 45, 256, 45);
-        gg.pose().popPose();
+        gg.pose().pushMatrix();
+        gg.pose().translate(0, 0);
+        gg.blit(RenderPipelines.GUI_TEXTURED, Constants.COMPASS_BACKGROUND, centerX - 128, 0, 0, 0, 256, 45, 256, 45, -1);
+        gg.pose().popMatrix();
     }
 
     public static void renderCompassStrip(GuiGraphics gg, Font font, int centerX, float yaw) {
@@ -44,12 +44,12 @@ public class ThemeRenderer {
 
                 String numText = String.valueOf((int) angleLoop);
 
-                gg.pose().pushPose();
+                gg.pose().pushMatrix();
                 float scale = 0.9f;
-                gg.pose().translate(xPos + 1, 10, 0);
-                gg.pose().scale(scale, scale, 1f);
+                gg.pose().translate(xPos + 1, 10);
+                gg.pose().scale(scale, scale);
                 drawCenteredString(gg, font, numText, 0, 0);
-                gg.pose().popPose();
+                gg.pose().popMatrix();
             }
         }
     }

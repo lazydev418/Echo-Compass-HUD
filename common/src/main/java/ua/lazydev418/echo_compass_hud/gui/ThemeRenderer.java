@@ -2,7 +2,7 @@ package ua.lazydev418.echo_compass_hud.gui;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.world.entity.player.Player;
 import ua.lazydev418.echo_compass_hud.util.Colors;
@@ -12,7 +12,7 @@ import ua.lazydev418.echo_compass_hud.util.CompassMath;
 
 public class ThemeRenderer {
 
-    public static void renderBackground(GuiGraphics gg, int centerX) {
+    public static void renderBackground(GuiGraphicsExtractor gg, int centerX) {
         gg.fill(centerX - 127, 27, centerX + 127, 43, 0x40000000);
         gg.fill(centerX - 127, 0, centerX + 127, 24, 0x40000000);
         gg.pose().pushMatrix();
@@ -21,7 +21,7 @@ public class ThemeRenderer {
         gg.pose().popMatrix();
     }
 
-    public static void renderCompassStrip(GuiGraphics gg, Font font, int centerX, float yaw) {
+    public static void renderCompassStrip(GuiGraphicsExtractor gg, Font font, int centerX, float yaw) {
         int startAngle = ((int) yaw / 15) * 15 - 120;
         int endAngle = ((int) yaw / 15) * 15 + 120;
 
@@ -38,7 +38,7 @@ public class ThemeRenderer {
                 String text = ChatFormatting.BOLD + dir.getShortName().getString();
                 int color = (dir == DirectionLabel.NORTH) ? Colors.RED.argb : Colors.WHITE.argb;
 
-                gg.drawString(font, text, (int) (xPos - font.width(text) / 2f), 4, color, false);
+                gg.text(font, text, (int) (xPos - font.width(text) / 2f), 4, color, false);
             } else {
                 gg.fill((int) xPos, 4, (int) xPos + 1, 8, Colors.WHITE.argb);
 
@@ -54,7 +54,7 @@ public class ThemeRenderer {
         }
     }
 
-    public static void renderInfoText(GuiGraphics gg, Font font, Player player, int centerX, float yaw) {
+    public static void renderInfoText(GuiGraphicsExtractor gg, Font font, Player player, int centerX, float yaw) {
         DirectionLabel currentDir = DirectionLabel.getFromYaw(yaw);
 
         String directionName = currentDir.getFull().getString();
@@ -68,7 +68,7 @@ public class ThemeRenderer {
         drawCenteredString(gg, font, angleText, centerX, 31);
     }
 
-    private static void drawCenteredString(GuiGraphics gg, Font font, String text, float x, int y) {
-        gg.drawString(font, text, (int) (x - font.width(text) / 2.0F), y, Colors.WHITE.argb);
+    private static void drawCenteredString(GuiGraphicsExtractor gg, Font font, String text, float x, int y) {
+        gg.text(font, text, (int) (x - font.width(text) / 2.0F), y, Colors.WHITE.argb);
     }
 }

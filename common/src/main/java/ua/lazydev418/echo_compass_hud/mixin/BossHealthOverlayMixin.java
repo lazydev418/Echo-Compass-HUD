@@ -1,7 +1,7 @@
 package ua.lazydev418.echo_compass_hud.mixin;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.BossHealthOverlay;
 import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,10 +15,10 @@ import ua.lazydev418.echo_compass_hud.util.IPlayerTabOverlay;
 public class BossHealthOverlayMixin {
 
     @Inject(
-            method = "render",
+            method = "extractRenderState",
             at = @At("HEAD")
     )
-    private void BossBarYPosBefore(GuiGraphics gg, CallbackInfo ci) {
+    private void BossBarYPosBefore(GuiGraphicsExtractor gg, CallbackInfo ci) {
         Minecraft mc = Minecraft.getInstance();
         Player player = mc.player;
 
@@ -64,10 +64,10 @@ public class BossHealthOverlayMixin {
     }
 
     @Inject(
-            method = "render",
+            method = "extractRenderState",
             at = @At("RETURN")
     )
-    private void BossBarYPosAfter(GuiGraphics gg, CallbackInfo ci) {
+    private void BossBarYPosAfter(GuiGraphicsExtractor gg, CallbackInfo ci) {
         Minecraft mc = Minecraft.getInstance();
         Player player = mc.player;
 

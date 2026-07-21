@@ -14,7 +14,7 @@ import ua.lazydev418.echo_compass_hud.util.IPlayerTabOverlay;
 @Mixin(Gui.class)
 public class GuiMixin {
 
-    @Inject(method = "render", at = @At("TAIL"))
+    @Inject(method = "render", at = @At("RETURN"))
     private void renderCompassHud(GuiGraphics gg, DeltaTracker dt, CallbackInfo ci) {
         Minecraft mc = Minecraft.getInstance();
 

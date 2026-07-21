@@ -21,6 +21,7 @@ plugins {
 }
 
 rootProject.name = 'Echo-Compass-HUD'
+includeBuild('build-logic')
 include('common')
 include('fabric')
 include('neoforge')
